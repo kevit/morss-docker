@@ -1,11 +1,14 @@
 ## Dockerizing morss
 
 ```
-docker built -t kevit/morss .
-docker run kevit/morss python morss/main.py clip https://www.reddit.com/r/selfhosted/.rss
+podman run --rm kevit/morss morss --clip https://www.reddit.com/r/selfhosted/.rss
+podman build -t kevit/morss .   
 ```
 
 ## Liferea integration
 
 Add a new feed as a command
-docker run kevit/morss python morss/main.py clip https://www.reddit.com/r/selfhosted/.rss
+
+```
+podman run --rm kevit/morss morss --clip https://www.reddit.com/r/selfhosted/.rss
+```
